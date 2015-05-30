@@ -117,8 +117,8 @@ public class SampleGridPagerAdapter extends FragmentGridPagerAdapter {
     }
 
     @Override
-    public ImageReference getBackground(int row, int column) {
-        return ImageReference.forDrawable(BG_IMAGES[row % BG_IMAGES.length]);
+    public Drawable getBackgroundForRow(int row) {
+        return  mContext.getResources().getDrawable(BG_IMAGES[row]);
     }
 
     @Override
